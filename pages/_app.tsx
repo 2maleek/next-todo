@@ -1,7 +1,13 @@
-import { AppProps } from 'next/app'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Nav from '@/components/nav'
 
-function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Nav/>
+      <Component {...pageProps} />
+    </>
+  )
 }
 
-export default App
+export default MyApp
